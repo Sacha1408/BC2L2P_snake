@@ -1,0 +1,21 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.4f1 (0abb6314276a) revision 703331'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.1052; Version 2009; 64bit' Language: 'fr' Physical Memory: 6020 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\2020.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/LENOVO/projets unity/BC2L2P_snake
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+61625
+Successfully changed project path to: C:/Users/LENOVO/projets unity/BC2L2P_snake
+C:/Users/LENOVO/projets unity/BC2L2P_snake
+Using Asset Import Pipeline V2.
