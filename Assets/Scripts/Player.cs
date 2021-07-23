@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public CharacterController controller;
+    public float speed = 12f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +17,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Déplacement tout droit
+        controller.Move(transform.up * speed * Time.deltaTime); //deltatime -> indépendant du framerate
     }
 }
