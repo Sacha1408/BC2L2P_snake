@@ -17,5 +17,5 @@ public class Enemy : Entity
     }
 
     // Constructeur reprenant le constructeur de l'entité
-    public Enemy(Collider c, Transform t, Sprite s) : base(c, t, s) { }
+    public Enemy(Vector3 p, Sprite s) : base(p, s) { }
 }

@@ -5,24 +5,24 @@ using UnityEngine;
 public static class EntityFactory
 {
 
-    public static Entity CreateEntity(string type, Collider c, Transform t, Sprite s)
+    public static Entity CreateEntity(string type, Vector3 p, Sprite s)
     {
         Entity e;
 
         switch (type)
         {
             case "Obstacle":
-                e = new Obstacle(c, t, s);
+                e = new Obstacle(p, s);
                 break;
 
             case "Enemy":
-                e = new Enemy(c, t, s);
+                e = new Enemy(p, s);
                 break;
-
+/*
             case "Tail":
-                e = new SnakeTail(c, t, s);
+                e = new SnakeTail(p, s);
                 break;
-
+*/
             default :
                 Debug.LogError("Entité de mauvais type !");
                 return null;

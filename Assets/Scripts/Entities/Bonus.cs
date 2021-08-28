@@ -6,7 +6,7 @@ public class Bonus : Entity
 
 {
 
-    public Bonus(Collider c, Transform t, Sprite s) : base(c, t, s) { }
+    public Bonus(Vector3 p, Sprite s) : base(p, s) { }
 
     //override collider pour gagner des points au lieu de mourir
 }
