@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
 
     private float interval; // Temps entre deux déplacements
     private float remainingBeforeMove; // Temps restant avant le prochain déplacement
+    private string arrow = ""; // Fixe la direction choisie par l'utilisateur
     private int choice = 0; // Indique si un choix de direction a été fait ou non : 0 si pas de virage, 1 si virage à gauche, 2 si virage à droite
 
     // Start is called before the first frame update
@@ -30,6 +31,11 @@ public class Player : MonoBehaviour
 
         interval = 1 / speed;
         remainingBeforeMove = interval;
+    }
+
+    public void SetArrow(string arrow)
+    {
+        this.arrow = arrow;
     }
 
     // Update is called once per frame
@@ -53,7 +59,7 @@ public class Player : MonoBehaviour
                 // Ne rien faire
 
                 // Si le joueur appuie sur le bouton 'gauche'
-                if (Input.GetKey("left") && choice == 0)
+                if ((Input.GetKey("left") || this.arrow == "left") && choice == 0)
                 {
                     transform.Rotate(0.0f, 0.0f, 90.0f, Space.Self);
                     // Un déplacement a été choisi, on empeche de le refaire
@@ -61,7 +67,7 @@ public class Player : MonoBehaviour
                 }
 
                 // Si le joueur appuie sur le bouton 'droite'
-                if (Input.GetKey("right") && choice == 0)
+                if ((Input.GetKey("right") || this.arrow == "right") && choice == 0)
                 {
                     transform.Rotate(0.0f, 0.0f, -90.0f, Space.Self);
                     // Un déplacement a été choisi, on empeche de le refaire
@@ -81,14 +87,14 @@ public class Player : MonoBehaviour
                 // Ne rien faire
 
                 // Si le joueur appuie sur le bouton 'gauche'
-                if (Input.GetKey("left") && choice == 0)
+                if ((Input.GetKey("left") || this.arrow == "left") && choice == 0)
                 {
                     transform.Rotate(0.0f, 0.0f, -90.0f, Space.Self);
                     // Un déplacement a été choisi, on empeche de le refaire
                     choice = 2;
                 }
                 // Si le joueur appuie sur le bouton 'droite'
-                if (Input.GetKey("right") && choice == 0)
+                if ((Input.GetKey("right") || this.arrow == "right") && choice == 0)
                 {
                     transform.Rotate(0.0f, 0.0f, 90.0f, Space.Self);
                     // Un déplacement a été choisi, on empeche de le refaire
@@ -102,14 +108,14 @@ public class Player : MonoBehaviour
                 //Debug.Log("gauche");
 
                 // Si le joueur appuie sur le bouton 'haut'
-                if (Input.GetKey("up") && choice == 0)
+                if ((Input.GetKey("up") || this.arrow == "up") && choice == 0)
                 {
                     transform.Rotate(0.0f, 0.0f, -90.0f, Space.Self);
                     // Un déplacement a été choisi, on empeche de le refaire
                     choice = 2;
                 }
                 // Si le joueur appuie sur le bouton 'bas'
-                if (Input.GetKey("down") && choice == 0)
+                if ((Input.GetKey("down") || this.arrow == "down") && choice == 0)
                 {
                     transform.Rotate(0.0f, 0.0f, 90.0f, Space.Self);
                     // Un déplacement a été choisi, on empeche de le refaire
@@ -129,14 +135,14 @@ public class Player : MonoBehaviour
                 //Debug.Log("droite");
 
                 // Si le joueur appuie sur le bouton 'haut'
-                if (Input.GetKey("up") && choice == 0)
+                if ((Input.GetKey("up") || this.arrow == "up") && choice == 0)
                 {
                     transform.Rotate(0.0f, 0.0f, 90.0f, Space.Self);
                     // Un déplacement a été choisi, on empeche de le refaire
                     choice = 1;
                 }
                 // Si le joueur appuie sur le bouton 'bas'
-                if (Input.GetKey("down") && choice == 0)
+                if ((Input.GetKey("down") || this.arrow == "down") && choice == 0)
                 {
                     transform.Rotate(0.0f, 0.0f, -90.0f, Space.Self);
                     // Un déplacement a été choisi, on empeche de le refaire
