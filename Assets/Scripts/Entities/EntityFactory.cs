@@ -2,31 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class EntityFactory
+public class EntityFactory : MonoBehaviour
 {
-
-    public static Entity CreateEntity(string type, Vector3 p, Sprite s)
+    public static void CreateEntity(string type, Vector3 p)
     {
         Entity e;
 
         switch (type)
         {
-            case "Obstacle":
-                e = new Obstacle(p, s);
+            case "obstacle":
+                e = new Obstacle(p);
                 break;
 
-            case "Enemy":
-                e = new Enemy(p, s);
+            case "enemy":
+                e = new Enemy(p);
                 break;
-/*
-            case "Tail":
-                e = new SnakeTail(p, s);
+
+            case "bonus":
+                e = new Bonus(p);
                 break;
-*/
+
             default :
                 Debug.LogError("Entité de mauvais type !");
-                return null;
+                break;
         }
-        return e;
     }
 }

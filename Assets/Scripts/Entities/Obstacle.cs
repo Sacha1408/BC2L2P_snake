@@ -17,5 +17,5 @@ public class Obstacle : Entity
     }
 
     // Constructeur reprenant le constructeur de l'entité
-    public Obstacle(Vector3 p, Sprite s) : base(p, s) {}
+    public Obstacle(Vector3 p) : base() {}
 }

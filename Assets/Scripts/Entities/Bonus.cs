@@ -3,10 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bonus : Entity
-
 {
+    Vector2 oldPos; // Pour éviter de générer le bonus 2 fois au même endroit
 
-    public Bonus(Vector3 p, Sprite s) : base(p, s) { }
+    public Bonus(Vector3 p) : base() {
+        Instantiate((GameObject)Resources.Load("Entities/Bonus"), p, new Quaternion(0, 0, 0, 0));
+    }
 
     //override collider pour gagner des points au lieu de mourir
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Debug.Log("POINTS");
+            Player p = other.GetComponent<Player>();
+            p.gm.scoreUp(100);
+            p.grow();
+
+            regenerate();
+            Destroy(gameObject);
+        }
+    }
+
+    private void regenerate()
+    {
+        // A modifier pour eviter l'apparition du bonus dans les obstacles
+        Vector2 pos = new Vector2(Random.Range(0, (int)GameManager.size.x), Random.Range(0, (int)GameManager.size.y));
+        Instantiate((GameObject)Resources.Load("Entities/Bonus"), pos, new Quaternion(0, 0, 0, 0));
+    }
 }

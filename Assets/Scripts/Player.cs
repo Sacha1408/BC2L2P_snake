@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GameManager gm;
+
     public CharacterController controller;
     public float speed = 1f;
     public int size = 2;                    // Taille de la queue du serpent
@@ -212,11 +214,17 @@ public class Player : MonoBehaviour
 
             // On se déplace, donc on autorise à faire un nouveau choix
             choice = 0;
+
+            gm.scoreUp(10);
         }
         else
         {
             remainingBeforeMove -= Time.deltaTime;
         }
+    }
 
+    public void grow()
+    {
+        size++;
     }
 }
