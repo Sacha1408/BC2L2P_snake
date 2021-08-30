@@ -11,13 +11,14 @@ public class Entity : MonoBehaviour
     // - Queue du snake
     // - Bonus
 
-    public Collider collider; // composant de collision
-    public Transform transform; // positionnement dans l'espace
+    //public Collider2D collider; // composant de collision
+    public Vector3 position; // positionnement dans l'espace
     public Sprite sprite; // sprite de l'entité
 
-    public Entity(Collider c, Transform t, Sprite s) { // constructeur
-        collider = c;
-        transform = t;
+    public Entity(Vector3 p, Sprite s) { // constructeur
+
+        //collider = new Collider2D();
+        position = p;
         sprite = s;
     }
 
