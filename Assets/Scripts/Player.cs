@@ -6,20 +6,20 @@ public class Player : MonoBehaviour
 {
     public CharacterController controller;
     public float speed = 1f;
-    public int size = 2; // Taille de la queue du serpent
-    public GameObject tailPart; // Queue du serpent
-    public GameObject tailEnd;
-    public GameObject tailTurn;
+    public int size = 2;                    // Taille de la queue du serpent
+    public GameObject tailPart;             // Queue du serpent
+    public GameObject tailEnd;              // Bout de la queue
+    public GameObject tailTurn;             // Queue qui tourne
 
-    private List<Vector3> tailPosBuffer; // historique des positions
+    private List<Vector3> tailPosBuffer;    // historique des positions
     private List<Quaternion> tailRotBuffer; // historique des rotations
-    private List<GameObject> tailObjects; // liste des parties de la queue du serpent
-    private List<int> turns;
+    private List<GameObject> tailObjects;   // liste des parties de la queue du serpent
+    private List<int> turns;                // Liste des virages du serpent (afin d'afficher les virages avec la queue)
 
-    private float interval; // Temps entre deux déplacements
-    private float remainingBeforeMove; // Temps restant avant le prochain déplacement
-    private string arrow = ""; // Fixe la direction choisie par l'utilisateur
-    private int choice = 0; // Indique si un choix de direction a été fait ou non : 0 si pas de virage, 1 si virage à gauche, 2 si virage à droite
+    private float interval;                 // Temps entre deux déplacements
+    private float remainingBeforeMove;      // Temps restant avant le prochain déplacement
+    private string arrow = "";              // Fixe la direction choisie par l'utilisateur
+    private int choice = 0;                 // Indique si un choix de direction a été fait ou non : 0 si pas de virage, 1 si virage à gauche, 2 si virage à droite
 
     // Start is called before the first frame update
     void Start()
@@ -180,6 +180,7 @@ public class Player : MonoBehaviour
                 tailPosBuffer.RemoveAt(tailPosBuffer.Count - 1);
                 tailRotBuffer.RemoveAt(tailRotBuffer.Count - 1);
                 tailObjects.RemoveAt(tailObjects.Count - 1);
+                turns.RemoveAt(turns.Count - 1);
             }
 
             for (int i = 0; i < tailPosBuffer.Count; i++)
@@ -206,7 +207,7 @@ public class Player : MonoBehaviour
                     g = Instantiate(tailPart, tailPosBuffer[i], tailRotBuffer[i]);
                 }
                 tailObjects.Insert(0, g);
-                Destroy(g, interval+0.01f);
+                Destroy(g, interval+0.02f); // On détruit cet élément au prochain déplacement, + 20ms pour éviter les clignotements
             }
 
             // On se déplace, donc on autorise à faire un nouveau choix

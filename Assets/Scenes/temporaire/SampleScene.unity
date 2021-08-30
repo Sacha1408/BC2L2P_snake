@@ -396,7 +396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 89666507}
   speed: 3
-  size: 30
+  size: 2
   tailPart: {fileID: 2578894327276031401, guid: 6d526099c24464148840d68fe54fb6c7, type: 3}
   tailEnd: {fileID: 7957067546713939144, guid: ad737b842419fa44aaa6c4d25c009570, type: 3}
   tailTurn: {fileID: 3337319435612581070, guid: 0a9814c5a2d6bcc41926c8ae679f49bd, type: 3}
