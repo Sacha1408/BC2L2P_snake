@@ -26,6 +26,7 @@ public class Obstacle : Entity
     {
         Debug.Log("in trigger");
 
+<<<<<<< HEAD
         // Si c'est une collision avec le joueur
         if (c.gameObject.tag == "Player")
         {
@@ -36,4 +37,8 @@ public class Obstacle : Entity
             Time.timeScale = 0f;
         }
     }
+=======
+    // Constructeur reprenant le constructeur de l'entité
+    public Obstacle(Vector3 p) : base() {}
+>>>>>>> 2c24503... Mise en place des bonus
 }
