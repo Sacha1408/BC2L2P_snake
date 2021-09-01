@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 27869518}
   - component: {fileID: 27869520}
   - component: {fileID: 27869519}
+  - component: {fileID: 27869521}
   m_Layer: 0
   m_Name: DownWall
   m_TagString: Untagged
@@ -149,8 +150,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27869517}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.28, y: -0.73, z: 0}
-  m_LocalScale: {x: 13.0552225, y: 1.4265702, z: 50}
+  m_LocalPosition: {x: 7.28, y: -1, z: 0}
+  m_LocalScale: {x: 13.0552225, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 1148516106}
   m_RootOrder: 3
@@ -219,6 +220,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &27869521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27869517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac4c91fd255d2a4a8b5e4741d9833ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &45562326
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +322,7 @@ GameObject:
   - component: {fileID: 89666505}
   - component: {fileID: 89666504}
   - component: {fileID: 89666507}
+  - component: {fileID: 89666509}
   - component: {fileID: 89666506}
   m_Layer: 0
   m_Name: Snake
@@ -419,6 +433,22 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &89666509
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89666503}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &131928397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,6 +1104,7 @@ GameObject:
   - component: {fileID: 862785011}
   - component: {fileID: 862785013}
   - component: {fileID: 862785012}
+  - component: {fileID: 862785014}
   m_Layer: 0
   m_Name: LeftWall
   m_TagString: Untagged
@@ -1089,8 +1120,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862785010}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.77, y: -6.54, z: 0}
-  m_LocalScale: {x: 1.3882738, y: 13.155298, z: 50}
+  m_LocalPosition: {x: 2, y: -6.5, z: 0}
+  m_LocalScale: {x: 1, y: 13.155298, z: 50}
   m_Children: []
   m_Father: {fileID: 1148516106}
   m_RootOrder: 0
@@ -1107,7 +1138,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
-  m_Center: {x: 0.000000059604645, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &862785013
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1159,6 +1190,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &862785014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862785010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac4c91fd255d2a4a8b5e4741d9833ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1064064639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1213,7 @@ GameObject:
   - component: {fileID: 1064064640}
   - component: {fileID: 1064064642}
   - component: {fileID: 1064064641}
+  - component: {fileID: 1064064643}
   m_Layer: 0
   m_Name: UpWall
   m_TagString: Untagged
@@ -1185,8 +1229,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064064639}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.44, y: -12.31, z: 0}
-  m_LocalScale: {x: 12.837507, y: 1.5510097, z: 50}
+  m_LocalPosition: {x: 7.5, y: -12, z: 0}
+  m_LocalScale: {x: 12.837507, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 1148516106}
   m_RootOrder: 2
@@ -1203,7 +1247,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
-  m_Center: {x: 0.000000059604645, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1064064642
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1255,6 +1299,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1064064643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064064639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac4c91fd255d2a4a8b5e4741d9833ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1133741289
 GameObject:
   m_ObjectHideFlags: 0
@@ -3978,6 +4034,7 @@ GameObject:
   - component: {fileID: 1788364365}
   - component: {fileID: 1788364367}
   - component: {fileID: 1788364366}
+  - component: {fileID: 1788364368}
   m_Layer: 0
   m_Name: RightWall
   m_TagString: Untagged
@@ -3993,8 +4050,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788364364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.24, y: -6.32, z: 0}
-  m_LocalScale: {x: 1.3260792, y: 12.594883, z: 50}
+  m_LocalPosition: {x: 13, y: -6.5, z: 0}
+  m_LocalScale: {x: 1, y: 12.594883, z: 50}
   m_Children: []
   m_Father: {fileID: 1148516106}
   m_RootOrder: 1
@@ -4011,7 +4068,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
-  m_Center: {x: 0.000000059604645, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1788364367
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4063,6 +4120,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1788364368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788364364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac4c91fd255d2a4a8b5e4741d9833ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2006527199
 GameObject:
   m_ObjectHideFlags: 0
