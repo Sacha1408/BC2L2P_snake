@@ -40,8 +40,5 @@ public class Obstacle : Entity
 =======
     // Constructeur reprenant le constructeur de l'entité
     public Obstacle(Vector3 p) : base() {}
-<<<<<<< HEAD
->>>>>>> 2c24503... Mise en place des bonus
-=======
 >>>>>>> 2c24503... Mise en place des bonus
 }
