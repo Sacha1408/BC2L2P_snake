@@ -9,6 +9,12 @@ public class GameManager : MonoBehaviour
 
     public int score = 0;
     public TMP_Text scoreText;
+    public GameOverScreen GameOverScreen;
+
+    public void GameOver() {
+        GameOverScreen.Setup(score);
+        Debug.Log("Game over Method");
+    }
 
     // Start is called before the first frame update
     void Start()

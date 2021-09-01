@@ -7,6 +7,7 @@ public class Obstacle : Entity
 
     // Constructeur reprenant le constructeur de l'entité
     public Obstacle(Vector3 p) : base() {}
+    public GameOverScreen GameOverScreen;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,8 +16,8 @@ public class Obstacle : Entity
         // Si c'est une collision avec le joueur
         if (collision.gameObject.tag == "Player")
         {
-            // Game over
-            Debug.Log("Game over");
+            // Déclenche la méthode GameOver du script GameManager
+            FindObjectOfType<GameManager>().GameOver();
 
             collision.gameObject.GetComponent<Player>().die();
 
