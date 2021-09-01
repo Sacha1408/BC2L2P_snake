@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 89666504}
   - component: {fileID: 89666507}
   - component: {fileID: 89666509}
+  - component: {fileID: 89666508}
   - component: {fileID: 89666506}
   m_Layer: 0
   m_Name: Snake
@@ -432,6 +433,19 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &89666508
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89666503}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1.0000002, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &89666509
 Rigidbody:
