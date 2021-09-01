@@ -11,7 +11,7 @@ public class Bonus : Entity
     }
 
     //override collider pour gagner des points au lieu de mourir
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {

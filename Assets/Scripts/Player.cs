@@ -173,7 +173,7 @@ public class Player : MonoBehaviour
             tailRotBuffer.Insert(0, transform.rotation);
 
             // D�placement tout droit
-            controller.Move(transform.up); //deltatime -> ind�pendant du framerate
+            transform.position+=transform.up; //deltatime -> ind�pendant du framerate
             remainingBeforeMove = interval;
             
             // Suppression du dernier élément de la liste
@@ -226,5 +226,14 @@ public class Player : MonoBehaviour
     public void grow()
     {
         size++;
+    }
+
+    public void die()
+    {
+        foreach(GameObject g in tailObjects)
+        {
+            Destroy(g);
+        }
+        Destroy(gameObject);
     }
 }
