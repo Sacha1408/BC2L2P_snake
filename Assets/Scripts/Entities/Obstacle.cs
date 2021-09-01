@@ -8,7 +8,7 @@ public class Obstacle : Entity
     // Constructeur reprenant le constructeur de l'entité
     public Obstacle(Vector3 p) : base() {}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("in collision");
 
@@ -18,19 +18,7 @@ public class Obstacle : Entity
             // Game over
             Debug.Log("Game over");
 
-            // On arrête le temps
-            Time.timeScale = 0f;
-        }
-    }
-    private void OnTriggerEnter(Collider c)
-    {
-        Debug.Log("in trigger");
-
-        // Si c'est une collision avec le joueur
-        if (c.gameObject.tag == "Player")
-        {
-            // Game over
-            Debug.Log("Game over");
+            collision.gameObject.GetComponent<Player>().die();
 
             // On arrête le temps
             Time.timeScale = 0f;
