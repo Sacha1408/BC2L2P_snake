@@ -20,9 +20,6 @@ public class Obstacle : Entity
             FindObjectOfType<GameManager>().GameOver();
 
             collision.gameObject.GetComponent<Player>().die();
-
-            // On arrête le temps
-            Time.timeScale = 0f;
         }
     }
 }
