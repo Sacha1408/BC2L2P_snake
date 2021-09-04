@@ -460,7 +460,7 @@ RectTransform:
   m_GameObject: {fileID: 200544108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 90, y: 90, z: 1}
+  m_LocalScale: {x: 88.3, y: 88.3, z: 1}
   m_Children:
   - {fileID: 45562327}
   m_Father: {fileID: 294683582}
@@ -468,9 +468,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 140, y: 158}
+  m_AnchoredPosition: {x: 116.20001, y: 154.2}
   m_SizeDelta: {x: 1, y: 1}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &200544110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,8 +601,8 @@ RectTransform:
   - {fileID: 2006527200}
   - {fileID: 1294885203}
   - {fileID: 1494560447}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 340132715}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -660,7 +660,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 340132714}
-  m_PlaneDistance: 16
+  m_PlaneDistance: 20
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -682,6 +682,7 @@ GameObject:
   - component: {fileID: 340132714}
   - component: {fileID: 340132713}
   - component: {fileID: 340132716}
+  - component: {fileID: 340132717}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -760,9 +761,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340132712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 4.5, z: -10}
+  m_LocalPosition: {x: 4, y: 4.5, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 294683582}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -781,6 +783,14 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 1294885204}
   GameOverScreen: {fileID: 1494560450}
+--- !u!81 &340132717
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340132712}
+  m_Enabled: 1
 --- !u!1 &402663849
 GameObject:
   m_ObjectHideFlags: 0
@@ -3118,7 +3128,7 @@ RectTransform:
   m_GameObject: {fileID: 1133741289}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 90, y: 90, z: 1}
+  m_LocalScale: {x: 88.3, y: 88.3, z: 1}
   m_Children:
   - {fileID: 131928398}
   m_Father: {fileID: 294683582}
@@ -3126,9 +3136,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: 68}
+  m_AnchoredPosition: {x: 71.29999, y: 22.1}
   m_SizeDelta: {x: 1, y: 1}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1133741291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3392,9 +3402,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 140, y: -22}
+  m_AnchoredPosition: {x: 205.10004, y: -22.8}
   m_SizeDelta: {x: 1, y: 1}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1280577786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3641,7 +3651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1494560447
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3650,7 +3660,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494560446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -735}
+  m_LocalPosition: {x: 0, y: 0, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1641499230}
@@ -4682,9 +4692,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 230, y: 68}
+  m_AnchoredPosition: {x: 249.79999, y: 110.2}
   m_SizeDelta: {x: 1, y: 1}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2006527201
 MonoBehaviour:
   m_ObjectHideFlags: 0
