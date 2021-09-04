@@ -5,6 +5,12 @@ using UnityEngine;
 public class Bonus : Entity
 {
     Vector2 oldPos; // Pour éviter de générer le bonus 2 fois au même endroit
+    private AudioSource bonusSound;
+
+    private void Start()
+    {
+        bonusSound = GetComponent<AudioSource>();
+    }
 
     public Bonus(Vector3 p) : base() {
         Instantiate((GameObject)Resources.Load("Entities/Bonus"), p, new Quaternion(0, 0, 0, 0));
@@ -15,9 +21,10 @@ public class Bonus : Entity
     {
         if (other.tag == "Player")
         {
-            Debug.Log("POINTS");
+            //Debug.Log("POINTS");
             Player p = other.GetComponent<Player>();
             p.gm.scoreUp(100);
+            bonusSound.Play();
             p.grow();
 
             regenerate();
@@ -29,6 +36,14 @@ public class Bonus : Entity
     {
         // A modifier pour eviter l'apparition du bonus dans les obstacles
         Vector2 pos = new Vector2(Random.Range(0, (int)GameManager.size.x), Random.Range(0, (int)GameManager.size.y));
-        Instantiate((GameObject)Resources.Load("Entities/Bonus"), pos, new Quaternion(0, 0, 0, 0));
+        
+        if(pos == oldPos)
+        {
+            regenerate();
+        }
+        else
+        {
+            Instantiate((GameObject)Resources.Load("Entities/Bonus"), pos, new Quaternion(0, 0, 0, 0));
+        }
     }
 }
