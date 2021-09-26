@@ -9,7 +9,7 @@ public class Bonus : Entity
 
     private void Start()
     {
-        bonusSound = GetComponent<AudioSource>();
+        bonusSound = GameObject.FindGameObjectWithTag("score").GetComponent<AudioSource>();
     }
 
     public Bonus(Vector3 p) : base() {

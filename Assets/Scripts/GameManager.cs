@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameOverScreen GameOverScreen;
 
     public void GameOver() {
+        GetComponent<AudioSource>().Stop();
         GameOverScreen.Setup(score);
         Debug.Log("Game over Method");
     }
