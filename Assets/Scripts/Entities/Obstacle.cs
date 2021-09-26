@@ -7,7 +7,6 @@ public class Obstacle : Entity
 
     // Constructeur reprenant le constructeur de l'entité
     public Obstacle(Vector3 p) : base() {}
-    public GameOverScreen GameOverScreen;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
